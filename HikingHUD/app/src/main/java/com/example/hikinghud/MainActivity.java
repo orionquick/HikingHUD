@@ -15,14 +15,14 @@ import androidx.annotation.NonNull;
 public class MainActivity extends AppCompatActivity {
 
     private MapView mapView;
-    private int style = 0; // Satellite - 0, Mapbox = 1
+    private int style = 1; // Satellite - 0, Mapbox = 1
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Mapbox.getInstance(this, "pk.eyJ1Ijoib3Jpb25xdWljayIsImEiOiJjazI2ejl1bXYwYjc3M2hvNmgwY2Z4dTg0In0.nG7HWuR8E3KOl1qlZqLuzQ");
-        setContentView(R.layout.main_menu);
-        /*mapView = findViewById(R.id.mapView);
+        Mapbox.getInstance(this, "pk.eyJ1Ijoib3Jpb25xdWljayIsImEiOiJjazI2ejl1bXYwYjc3M2hvNmgwY2Z4dTg0In0.nG7HWuR8E3KOl1qlZqLuzQ");
+        setContentView(R.layout.mapbox_map);
+        mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(new OnMapReadyCallback() {
             @Override
@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                     });
                 }
             }
-        });*/
-    }/*
+        });
+    }
 
     @Override
     public void onStart() {
@@ -85,5 +85,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         mapView.onSaveInstanceState(outState);
-    }*/
+    }
 }

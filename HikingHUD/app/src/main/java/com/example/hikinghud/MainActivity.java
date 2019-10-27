@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 public class MainActivity extends AppCompatActivity {
 
     private MapView mapView;
-    private int style = 1; // Satellite - 0, Mapbox = 1
+    private int style = 0; // Satellite - 0, Mapbox = 1
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

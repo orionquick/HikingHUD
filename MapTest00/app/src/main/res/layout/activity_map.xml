@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme"
+    tools:context=".MainActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        mapbox:mapbox_cameraTargetLat="40.73581"
+        mapbox:mapbox_cameraTargetLng="-73.99155"
+        mapbox:mapbox_cameraZoom="11">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            mapbox:srcCompat="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="318dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            mapbox:srcCompat="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="73dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom|center"
+            mapbox:srcCompat="@color/colorAccent" />
+
+        <ImageButton
+            android:id="@+id/terrain_button"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom|right"
+            android:background="#00FFFFFF"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:onClick="onTerrainClicked"
+            mapbox:srcCompat="@drawable/ic_terrain_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/wat_button"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom"
+            android:background="#00FFFFFF"
+            android:onClick="onWatClicked"
+            mapbox:srcCompat="@drawable/ic_pool_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/aid_button"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="75dp"
+            android:background="#00FFFFFF"
+            android:onClick="onAidClicked"
+            mapbox:srcCompat="@drawable/ic_healing_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/temp_button"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="75dp"
+            android:background="#00FFFFFF"
+            android:onClick="onTempClicked"
+            mapbox:srcCompat="@drawable/ic_ac_unit_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/nav_button"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom|center"
+            android:background="#00FFFFFF"
+            android:baselineAlignBottom="false"
+            android:onClick="onNavClicked"
+            mapbox:srcCompat="@drawable/ic_navigation_black_24dp" />
+
+        <SearchView
+            android:layout_width="287dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:hapticFeedbackEnabled="false" />
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+</RelativeLayout>
